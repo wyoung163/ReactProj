@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+.total {
+  text-align: center; 
+}
+
+.App-header {
+    background-color: rgb(255, 255, 153);
+    min-height: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content: center;
+    font-size: calc(20px + 1vmin);
+    color: black;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-family: 'Gaegu', cursive;
+  }
+  
+  .todo {
+    background-color:lightskyblue;
+    border-radius: 3px;
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    right: 55%;
+    left: 100px;
+    padding-top: 20px;
+    border: none;
+    font-size: calc(10px + 1vmin);
+    font-family: 'Gaegu', cursive;
+  }
+
+  .records {
+    padding-top: 20px;
+    background-color:lightblue;
+    border-radius: 3px;
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    right: 100px;
+    left: 55%;
+    border: none;
+    font-size: calc(10px + 1vmin);
+    font-family: 'Gaegu', cursive;
+  }
+
+  .add {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    background-color:rgb(255, 255, 153);
+    border-radius: 3px;
+    transition: all;
+    border: none;
+    font-size: calc(10px + 1vmin);
+    font-family: 'Gaegu', cursive;
+    padding: 10px;
+    width: 250px;
+  }
+  
