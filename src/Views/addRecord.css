@@ -87,6 +87,30 @@
     margin-bottom: 20px;
     font-family: 'Gaegu', cursive;
 }
+
+.pic_txt {
+    position: absolute;
+    left: 15%;
+    font-size: 30px;
+    font-family: 'Gaegu', cursive;
+}
+
+.pic {
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    font-size: 25px;
+    font-family: 'Gaegu', cursive;
+    background-color: lightblue;
+    border: none;
+    border-radius: 8px;
+    padding: 2px;
+    width:20%;
+    position: absolute;
+    right: 15%;
+}
   
 .record {
     background-color: deepskyblue; 
