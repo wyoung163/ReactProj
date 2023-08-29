@@ -5,10 +5,14 @@ import '../Views/home.css';
 const Home = () => {
     const navigate = useNavigate();
  
-    const addRecord = () => {
+    const addRecordByWords = () => {
       navigate("/record");
     };
     
+    const addRecordByPic = () => {
+        navigate("/record/pic");
+      };
+
     return (
             <div className="App">
             <header className="App-header">
@@ -16,7 +20,8 @@ const Home = () => {
             </header>
             <body className='total'>
                 <div>
-                <button className="add" onClick={addRecord}>+ 오늘의 기록을 남겨보세요</button>
+                <button className="add1" onClick={addRecordByWords}>+ 글로 오늘을 기억하기</button>
+                <button className="add2" onClick={addRecordByPic}>+ 사진으로 오늘을 기억하기</button>
                 </div>
                 &nbsp;
                 <div>

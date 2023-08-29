@@ -1,7 +1,8 @@
 import './App.css';
 import {Router, Route, Routes, BrowserRouter} from "react-router-dom";
 import HomePage from "./Routes/home";
-import WriteRecordPage from "./Routes/addRecord";
+import WriteRecordPage from "./Routes/addRecordByWords";
+import WriteRecordPicPage from "./Routes/addRecordByPic";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/record" element={<WriteRecordPage />}/>
+        <Route path="/record/pic" element={<WriteRecordPicPage />}/>
       </Routes>
     </BrowserRouter>
   );
