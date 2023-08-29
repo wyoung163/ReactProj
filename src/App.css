@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
 .App {
   text-align: center;
 }
@@ -22,6 +24,7 @@
   justify-content: center;
   font-size: calc(10px + 1vmin);
   color: white;
+  font-family: 'Gaegu', cursive;
 }
 
 .add {
@@ -30,6 +33,7 @@
   transition: all;
   border: none;
   font-size: calc(6px + 1vmin);
+  font-family: 'Gaegu', cursive;
 }
 
 .App-link {
