@@ -1,10 +1,17 @@
 import React from 'react';
-//import {Link} from "react-router-dom";
+import '../Views/addRecord.css';
+import { useNavigate } from "react-router-dom";
 
-const writeRecord = () => {
+const WriteRecord = () => {
+    const navigate = useNavigate();
+ 
+    const backToHome = () => {
+      navigate("/");
+    };
+
     return (
-        <div>
-            <p>제목을 지어보아요.</p>
+        <div className='total'>
+            <p className='title_txt'>제목을 지어보아요.</p>
             <input
                 type="text"
                 name="title"
@@ -12,7 +19,7 @@ const writeRecord = () => {
                 class="title"
             />
             <br/>
-            <p>오늘은 언제인지 알려주세요.</p>
+            <p className='today_txt'>오늘은 언제인지 알려주세요.</p>
             <input
                 type="date"
                 name="today"
@@ -20,7 +27,7 @@ const writeRecord = () => {
                 class="today"          
             />
             <br/>
-            <p>오늘을 한 단어로 표현해보아요.</p>
+            <p className='word_txt'>오늘을 한 단어로 표현해보아요.</p>
             <input
                 type="text"
                 name="word"
@@ -28,18 +35,19 @@ const writeRecord = () => {
                 class="word"          
             />
             <br/>
-            <p>오늘을 어떻게 기억하고 싶은지 기록해보아요.</p>
-            <input
-                type="text"
+            <p className='content_txt'>오늘을 어떻게 기억하고 싶은지 기록해보아요.</p>
+            <textarea
+                rows={6}
+                cols={70}
                 name="content"
                 id="content"
                 class="content"          
             />
             <br/><br/>
-            <button type="submit" id="record">기록할게요.</button>
-            <button type="reset" id="no-record">기록하지 않을게요.</button>
+            <button type="submit" className="record" id="record" onClick={backToHome}>기록</button>
+            <button type="reset" className="no-record" id="no-record" onClick={backToHome}>취소</button>
         </div>
     );
 };
 
-export default writeRecord;
+export default WriteRecord;

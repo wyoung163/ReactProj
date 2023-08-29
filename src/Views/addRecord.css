@@ -1,0 +1,113 @@
+ @import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+.total {
+    text-align: center; 
+}
+
+.title_txt {
+    padding-left: 15%;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Gaegu', cursive;
+}
+
+.title {
+    background-color: lightblue;
+    width: 70%;
+    height: 10%;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    text-align: left;
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: 20px;
+    font-family: 'Gaegu', cursive;
+}
+
+.today_txt {
+    padding-left: 15%;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Gaegu', cursive;
+}
+
+.today {
+    background-color: lightblue;
+    width: 70%;
+    height: 10%;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    text-align: left;
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: 20px;
+    font-family: 'Gaegu', cursive;
+}
+
+.word_txt {
+    padding-left: 15%;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Gaegu', cursive;
+}
+
+.word {
+    background-color: lightblue;
+    width: 70%;
+    height: 10%;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    text-align: left;
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: 20px;
+    font-family: 'Gaegu', cursive;
+}
+
+.content_txt {
+    padding-left: 15%;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Gaegu', cursive;
+}
+
+.content {
+    background-color: lightblue;
+    width: 70%;
+    height: 150px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    text-align: start;
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: 20px;
+    font-family: 'Gaegu', cursive;
+}
+  
+.record {
+    background-color: deepskyblue; 
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 15px;
+    font-size: 25px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Gaegu', cursive;
+}
+
+.no-record {
+    background-color: deepskyblue; 
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 15px;
+    font-size: 25px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Gaegu', cursive;
+}
