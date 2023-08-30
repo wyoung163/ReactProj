@@ -1,0 +1,26 @@
+.Todo {
+    list-style-type:none; 
+}
+
+.writeTodo {
+    background-color: lightyellow;
+    width: 50%;
+    height: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    text-align: left;
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: 20px;
+    font-family: 'Gaegu', cursive;
+}
+
+.btn {
+    background-color: lemonchiffon; 
+    width: 8%;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Gaegu', cursive;
+}
