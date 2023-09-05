@@ -1,12 +1,17 @@
 import React, { useCallback, useRef, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import '../Views/home.css';
+import Login from './login';
 import TodoList from '../Components/TodoList';
 import TodoListItem from '../Components/TodoListItem';
 import TodoInsert from './addTodo';
 
 const Home = () => {
     const navigate = useNavigate();
+
+    const Login = () => {
+        navigate("/login");
+      };
  
     const addRecordByWords = () => {
       navigate("/record");
@@ -74,7 +79,8 @@ const Home = () => {
     return (
             <div className="App">
             <header className="App-header">
-            Remember Me
+            Remember Me 
+            <button className='login' onClick={Login}>LOGIN</button>
             </header>
             <body className='total'>
                 <div>
