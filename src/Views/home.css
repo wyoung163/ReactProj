@@ -4,6 +4,19 @@
   text-align: center; 
 }
 
+.login {
+  background-color: rgb(255, 255, 153); 
+  width: 6%;
+  height: 45px;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Gaegu', cursive;
+  position: absolute;
+  right: 30px;
+}
+
 .App-header {
     background-color: rgb(255, 255, 153);
     min-height: 8vh;
