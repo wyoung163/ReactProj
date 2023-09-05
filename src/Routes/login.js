@@ -23,13 +23,6 @@ function Login({onInsert}) {
 
     const addUser = async () => {
         //e.preventDefault();
-        // axios.post("/user", {
-        //     email: mailRef.current.value,
-        //     password: pwdRef.current.value,
-        // }).then((res) => {
-        //       if(res.ok){
-        //         alert("생성이 완료 되었습니다.");
-        // }});
         
         await axios
         .post('/user',{
