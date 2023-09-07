@@ -8,9 +8,18 @@ import TodoInsert from './addTodo';
 
 const Home = () => {
     const navigate = useNavigate();
+    
+    const SignUp = () => {
+        navigate("/signup");
+      };
 
     const Login = () => {
         navigate("/login");
+      };
+
+      
+    const I = () => {
+        navigate("/user");
       };
  
     const addRecordByWords = () => {
@@ -79,8 +88,10 @@ const Home = () => {
     return (
             <div className="App">
             <header className="App-header">
-            Remember Me 
+            Remember
+            <button className='singup' onClick={SignUp}>SIGNUP</button>
             <button className='login' onClick={Login}>LOGIN</button>
+            <button className='i' onClick={I}>I</button>
             </header>
             <body className='total'>
                 <div>
