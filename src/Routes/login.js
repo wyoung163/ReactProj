@@ -25,12 +25,14 @@ function Login({onInsert}) {
         //e.preventDefault();
         
         await axios
-        .post('/user',{
+        .post('/login',{
             email: mailRef.current.value,
             password:"pswd"
         })
         .then((response) => {
-            console.log(response.data);		//정상 통신 후 응답된 메시지 출력
+            console.log(response.data);		//정상 통신 후 응답된 메시지 출력	
+            localStorage.setItem("access_token", response.data.access_token);
+            localStorage.setItem("refresh_tokeny", response.data.refresh_token);
         });
         // .catch((error)=>{
         //     console.log(error);				//오류발생시 실행
@@ -55,7 +57,7 @@ function Login({onInsert}) {
     ,[])
     return (
         <form className="loginPage"  onSubmit={onSubmit}>
-            <header className='header'>Welcome</header>
+            <header className='header'>Welcome! You are in login page.</header>
             <br /> <br />
             <input 
             className='write'
@@ -65,6 +67,7 @@ function Login({onInsert}) {
             <br />
             <input 
             className='write'
+            type='password'
             onChange={onPasswordHandler}
             password={password} placeholder="비밀번호를 입력하세요" 
             ref={pwdRef}/>
