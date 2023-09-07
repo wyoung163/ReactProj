@@ -2,9 +2,9 @@ import React, { useCallback, useRef, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
-import "../Views/login.css"
+import "../Views/signup.css"
 
-function Login({onInsert}) {
+function SignUp({onInsert}) {
     const navigate = useNavigate();
     const Home = () => {
         navigate("/");
@@ -25,12 +25,12 @@ function Login({onInsert}) {
         //e.preventDefault();
         
         await axios
-        .post('/login',{
+        .post('/signup',{
             email: mailRef.current.value,
             password:"pswd"
         })
         .then((response) => {
-            console.log(response.data);		//정상 통신 후 응답된 메시지 출력	
+            console.log(response.data);		//정상 통신 후 응답된 메시지 출력
             localStorage.setItem("access_token", response.data.access_token);
             localStorage.setItem("refresh_tokeny", response.data.refresh_token);
         });
@@ -38,7 +38,6 @@ function Login({onInsert}) {
         //     console.log(error);				//오류발생시 실행
         // })
     };
-        
   
     const mailRef = useRef(null)
     const pwdRef = useRef(null);
@@ -56,8 +55,8 @@ function Login({onInsert}) {
         }
     ,[])
     return (
-        <form className="loginPage"  onSubmit={onSubmit}>
-            <header className='header'>Welcome! You are in login page.</header>
+        <form className="signUpPage"  onSubmit={onSubmit}>
+            <header className='header'>Welcome, new friend!</header>
             <br /> <br />
             <input 
             className='write'
@@ -71,6 +70,11 @@ function Login({onInsert}) {
             onChange={onPasswordHandler}
             password={password} placeholder="비밀번호를 입력하세요" 
             ref={pwdRef}/>
+            <br />
+            <input 
+            type="checkbox"
+            className='agree'/>
+            <text> 나를 꾸준히 기록하고 기억하는 일에 동의합니다. </text>
             <br /><br />
             <button className='btn' type="submit" onClick={at}>
                 OK
@@ -79,4 +83,4 @@ function Login({onInsert}) {
     )
 }
 
-export default Login;
+export default SignUp;
