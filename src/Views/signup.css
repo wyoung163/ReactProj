@@ -1,0 +1,32 @@
+.signUpPage {
+    padding-top: 10%;
+    text-align: center;
+}
+
+.header {
+    font-size: 45px;
+    font-family: 'Gaegu', cursive;
+}
+
+.write {
+    background-color: lightyellow;
+    width: 50%;
+    height: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: 20px;
+    font-family: 'Gaegu', cursive;
+}
+
+.btn {
+    background-color: lemonchiffon; 
+    width: 8%;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Gaegu', cursive;
+}
