@@ -13,109 +13,20 @@ const Home = () => {
         navigate("/signup");
       };
 
-    const Login = () => {
-        navigate("/login");
-      };
-
-      
-    const I = () => {
-        navigate("/user");
-      };
- 
-    const addRecordByWords = () => {
-      navigate("/record");
-    };
+    const url = "https://www.oidc.shop/realms/OIDC/protocol/openid-connect/auth?response_type=code&client_id=amazon-keycloak-openid-connect&redirect_uri=http://localhost:3000/connect";
     
-    const addRecordByPic = () => {
-        navigate("/record/pic");
-    };
+    const Login = () => {
+        window.open(url);
+      };
 
-    // 일정 항목
-    const [todos, setTodos] = useState([
-        {
-            id: 1,
-            text: "짧은 일기 쓰기",
-            checked: true,
-        },
-        {
-            id: 2,
-            text: "잠 충분히 자기",
-            checked: true,
-        },
-        {
-            id: 3,
-            text: "코드 10줄 이상 완성하기",
-            checked: false,
-        },
-    ]);
-
-    // 새 투두 항목 추가
-    const next = useRef(4);
-    const onInsert = useCallback(
-        (text) => {
-            const todo = {
-                id: next.current,
-                text,
-                checked: false,
-            };
-            setTodos(todos.concat(todo));
-            next.current++;
-        },
-        [todos],
-    );
-
-    // 투두 제거
-    const onRemove = useCallback(
-        // 일치하지 않는 항목만 모아서 새 배열 생성
-        (id) => {
-            setTodos(todos.filter((todo) => todo.id !== id));
-        },
-        [todos]
-    )
-
-    //checked 변화
-    const onToggle = useCallback(
-        (id) => {
-            setTodos(
-                todos.map((todo) => 
-                    todo.id === id ? {...todo, checked: !todo.checked } : todo,
-                ),
-            );
-        },
-        [todos],
-    )
-
+    //const url = "http://211.175.140.88:8080/auth/realms/OpenStack/protocol/saml/clients/saml-test"
     return (
             <div className="App">
             <header className="App-header">
-            Remember
+            KeyCloak / AWS
             <button className='singup' onClick={SignUp}>SIGNUP</button>
             <button className='login' onClick={Login}>LOGIN</button>
-            <button className='i' onClick={I}>I</button>
             </header>
-            <body className='total'>
-                <div>
-                <button className="add1" onClick={addRecordByWords}>+ 글로 오늘을 기억하기</button>
-                <button className="add2" onClick={addRecordByPic}>+ 사진으로 오늘을 기억하기</button>
-                </div>
-                &nbsp;
-                <div>
-                <span>
-                    <p className="records">추억을 넘겨보아요</p>
-                </span>
-                <span>
-                    <p className="todo">
-                        까먹지 말아요
-                        <br />
-                        <br />
-                        <TodoInsert onInsert={onInsert}/>
-                        <TodoList
-                        todos={todos}
-                        />
-                    </p>
-                </span>
-                </div>
-            </body>
         </div>
     );
 };

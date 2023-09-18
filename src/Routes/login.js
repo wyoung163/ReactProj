@@ -39,7 +39,8 @@ function Login({onInsert}) {
         // })
     };
         
-  
+    const url = "https://www.oidc.shop/realms/OIDC/protocol/openid-connect/auth?response_type=code&client_id=amazon-keycloak-openid-connect&scope=profile&redirect_uri=https://signin.aws.amazon.com/federation";
+    //const url = "http://211.175.140.88:8080/auth/realms/OpenStack/protocol/saml/clients/saml-test"
     const mailRef = useRef(null)
     const pwdRef = useRef(null);
     const at = () => {
@@ -72,7 +73,7 @@ function Login({onInsert}) {
             password={password} placeholder="비밀번호를 입력하세요" 
             ref={pwdRef}/>
             <br /><br />
-            <button className='btn' type="submit" onClick={at}>
+            <button className='btn' type="submit" onClick={window.open(url)}>
                 OK
             </button>
         </form>

@@ -5,7 +5,7 @@ import WriteRecordPage from "./Routes/addRecordByWords";
 import WriteRecordPicPage from "./Routes/addRecordByPic";
 import Login from './Routes/login';
 import SignUp from './Routes/singup';
-import I from './Routes/user';
+import Connect from './Routes/awsConsole';
 
 function App() {
   return (
@@ -14,9 +14,10 @@ function App() {
         <Route path="/" element={<HomePage />}/>
         <Route path="/signup" element={<SignUp />}/>
         <Route path="/login" element={<Login />}/>
-        <Route path="/user" element={<I />}/>
+        <Route path="/connect" element={<Connect />}/>
+        {/* <Route path="/user" element={<I />}/>
         <Route path="/record" element={<WriteRecordPage />}/>
-        <Route path="/record/pic" element={<WriteRecordPicPage />}/>
+        <Route path="/record/pic" element={<WriteRecordPicPage />}/> */}
       </Routes>
     </BrowserRouter>
   );
